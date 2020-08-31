@@ -1,0 +1,11 @@
+name: 'Docker deployer actions'
+description: 'Docker image to use Deployer (Deployment tool for PHP) without the need to have PHP on your host.'
+author: 'Yann LUCAS'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    entrypoint: '/entrypoint.sh'
+inputs:
+    SSH_PRIVATE_KEY:
+        description: 'SSH key to use during the deployment'
+        required: true

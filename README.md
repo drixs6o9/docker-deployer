@@ -25,6 +25,18 @@ alias dep="docker run --rm -ti -v $PWD:/app drixs6o9/docker-deployer:latest"
 alias dep="docker run --rm -ti -v $PWD:/app -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK drixs6o9/docker-deployer:latest"
 ```
 
+## Github Actions
+You can use this docker image in docker actions.
+```yaml
+- name: Deploy to prod server
+  uses: drixs6o9/docker-deployer@master
+  with:
+    args: deploy prod
+   env:
+    SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+```
+***/!\ Be aware in your deployer configuration you have to disable multiplexing.***
+
 ## Build arguments
 
 Argument         | Default value
@@ -32,5 +44,4 @@ Argument         | Default value
 DEPLOYER_VERSION | 6.8.0
 
 ## Credits
-
 Based on [omouren's idea](https://github.com/omouren/docker-deployer)
