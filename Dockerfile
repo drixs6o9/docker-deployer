@@ -1,7 +1,7 @@
 FROM php:cli-alpine
 MAINTAINER Yann LUCAS <contact@yann-lucas.fr>
 
-ARG DEPLOYER_VERSION=6.0.5
+ARG DEPLOYER_VERSION=6.1.0
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
