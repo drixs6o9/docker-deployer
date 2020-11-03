@@ -41,7 +41,7 @@ You can use this docker image in docker actions.
 
 Argument         | Default value
 :--------------: | :-----------:
-DEPLOYER_VERSION | 2.0.2
+DEPLOYER_VERSION | 3.0.0-beta
 
 ## Credits
 Based on [omouren's idea](https://github.com/omouren/docker-deployer)
